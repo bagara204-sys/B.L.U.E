@@ -111,14 +111,26 @@ document.getElementById("textoAula").value;
 
 let frases=
 texto.split(".");
+} 
+function gerarResumo(){
 
-let resumo=
-frases.slice(0,3).join(".");
+    let texto =
+    document.getElementById("textoAula").value;
 
-document.getElementById("resultado")
-.innerHTML=
-"<h3>Resumo Final</h3>"+resumo;
+    let agente = new AgenteBLUE();
 
+    let resultado = agente.analisar(texto);
+
+    document.getElementById("resultado").innerHTML = `
+        <h3>🤖 Agente BLUE</h3>
+        <h4>Resumo</h4>
+        <p>${resultado.resumo}</p>
+
+        <h4>Palavras-chave</h4>
+        <p>${resultado.palavrasChave.join(", ")}</p>
+    `;
+
+}
 }
 
 function gerarMapa() {
