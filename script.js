@@ -92,21 +92,43 @@ document.getElementById("resultado")
 
 }
 
-function gerarMapa(){
+function gerarMapa() {
 
-let texto=
-document.getElementById("textoAula").value;
+let texto = document.getElementById("textoAula").value;
 
-let palavras=
-texto.split(" ").slice(0,15);
+let frases = texto
+  .split(".")
+  .filter(f => f.trim() !== "");
 
-document.getElementById("resultado")
-.innerHTML=
-"<h3>Mapa Mental</h3><p>"
-+ palavras.join(" ➜ ")
-+"</p>";
+let html = `
+<h3>🧠 Mapa Mental</h3>
+
+<div class="mindmap">
+
+<div class="centro">
+Tema Principal
+</div>
+`;
+
+frases.forEach(frase => {
+
+html += `
+<div class="ramo">
+<span>➜</span>
+<div class="caixa">
+${frase.trim()}
+</div>
+</div>
+`;
+
+});
+
+html += `</div>`;
+
+document.getElementById("resultado").innerHTML = html;
 
 }
+
 
 function gerarPDF(){
 
