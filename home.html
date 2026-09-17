@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BLUE</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>🏫 BLUE</h2>
+
+<div>
+Olá, estudante!
+<button onclick="logout()">Sair</button>
+</div>
+
+</header>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🎤 Gravação de Áudio</h3>
+
+<button onclick="iniciarGravacao()">
+Iniciar
+</button>
+
+<button onclick="pararGravacao()">
+Parar
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>📝 Resumo</h3>
+
+<button onclick="gerarResumo()">
+Gerar Resumo
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>🧠 Mapa Mental</h3>
+
+<button onclick="gerarMapa()">
+Criar
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>📄 Exportar PDF</h3>
+
+<button onclick="gerarPDF()">
+Baixar
+</button>
+
+</div>
+
+</div>
+
+<textarea id="textoAula"
+placeholder="A transcrição aparecerá aqui...">
+</textarea>
+
+<div id="resultado"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
