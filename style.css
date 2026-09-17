@@ -70,3 +70,39 @@ padding:20px;
 background:#0b3e9a;
 border-radius:15px;
 }
+
+.mindmap{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:15px;
+margin-top:20px;
+}
+
+.centro{
+background:#4fa7ff;
+padding:15px 25px;
+border-radius:15px;
+font-weight:bold;
+font-size:20px;
+}
+
+.ramo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.ramo span{
+font-size:28px;
+font-weight:bold;
+}
+
+.caixa{
+background:#0b3e9a;
+padding:12px;
+border-radius:12px;
+max-width:500px;
+text-align:left;
+border:2px solid #4fa7ff;
+}
