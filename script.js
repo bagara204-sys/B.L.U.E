@@ -131,7 +131,6 @@ function gerarResumo(){
     `;
 
 }
-}
 
 function gerarMapa() {
 
