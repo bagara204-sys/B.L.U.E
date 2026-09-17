@@ -75,6 +75,35 @@ recognition.stop();
 
 }
 
+class AgenteBLUE {
+
+    analisar(texto){
+
+        return {
+            resumo: gerarResumoIA(texto),
+            palavrasChave: extrairPalavras(texto)
+        };
+
+    }
+
+}
+
+function extrairPalavras(texto){
+
+    let palavras = texto.split(" ");
+
+    return palavras.slice(0,10);
+
+}
+
+function gerarResumoIA(texto){
+
+    let frases = texto.split(".");
+
+    return frases.slice(0,3).join(".");
+
+}
+
 function gerarResumo(){
 
 let texto=
